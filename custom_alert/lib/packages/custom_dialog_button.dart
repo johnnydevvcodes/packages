@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:palette/palette.dart';
 import 'package:rflutter_alert/rflutter_alert.dart';
 
 class CustomDialogButton {
@@ -27,7 +26,7 @@ class CustomDialogButton {
                 child: Text(
                   text ?? 'Dismiss',
                   style: TextStyle(
-                    color: color ?? Palette.baseBlue(),
+                    color: color,
                   ),
                 ),
               ),

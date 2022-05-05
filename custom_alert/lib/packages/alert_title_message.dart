@@ -1,6 +1,5 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
-import 'package:palette/palette.dart';
 import 'custom_dialog.dart';
 import 'custom_dialog_button.dart';
 
@@ -8,9 +7,11 @@ class AlertTitleAndMessage {
   final BuildContext context;
   final String title;
   final String subTitle;
+  final Color? color;
 
   AlertTitleAndMessage(
     this.context, {
+    this.color,
     required this.title,
     required this.subTitle,
   });
@@ -49,7 +50,7 @@ class AlertTitleAndMessage {
           Navigator.pop(context);
         },
         text: "Dismiss",
-        color: Palette.baseBlue(),
+        color: color,
       ),
     ).show();
   }

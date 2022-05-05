@@ -5,7 +5,7 @@ import 'hex_to_color.dart';
 class Palette {
   //
   static Color tagLineColor() => HexToColor("#8E8E8E");
-
+  
   static Color buttonColor() => HexToColor("#E5E5E5");
 
   static Color subtextColor() => HexToColor("#5A5A5A");

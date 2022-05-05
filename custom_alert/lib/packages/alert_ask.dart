@@ -1,6 +1,5 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
-import 'package:palette/palette.dart';
 import 'custom_dialog.dart';
 import 'custom_dialog_button.dart';
 
@@ -10,6 +9,7 @@ class AlertAsk {
   final String subTitle;
   final String? yesText;
   final String? noText;
+  final Color? color;
   final Function? onYes;
 
   final Widget? yesButton;
@@ -17,6 +17,7 @@ class AlertAsk {
 
   AlertAsk(
     this.context, {
+    this.color,
     this.yesButton,
     this.noButton,
     required this.title,
@@ -63,7 +64,7 @@ class AlertAsk {
                 onYes?.call();
               },
               text: noText,
-              color: Palette.baseBlue(),
+              color: color,
             ),
       noButton: noButton != null
           ? CustomDialogButton(child: noButton)
