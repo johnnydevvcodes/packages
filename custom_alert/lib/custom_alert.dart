@@ -1,7 +1,6 @@
 library custom_alert;
 
-/// A Calculator.
-class Calculator {
-  /// Returns [value] plus 1.
-  int addOne(int value) => value + 1;
-}
+export '../../packages/alert_ask.dart';
+export '../../packages/alert_title_message.dart';
+export '../../packages/custom_dialog.dart';
+export '../../packages/custom_dialog_button.dart';
