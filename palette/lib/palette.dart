@@ -1,7 +1,4 @@
 library palette;
 
-/// A Calculator.
-class Calculator {
-  /// Returns [value] plus 1.
-  int addOne(int value) => value + 1;
-}
+export 'packages/hex_to_color.dart';
+export 'packages/palette_package.dart';
