@@ -8,10 +8,12 @@ class AlertTitleAndMessage {
   final String title;
   final String subTitle;
   final Color? color;
+  final Function? onDone;
 
   AlertTitleAndMessage(
     this.context, {
     this.color,
+    this.onDone,
     required this.title,
     required this.subTitle,
   });
@@ -46,8 +48,9 @@ class AlertTitleAndMessage {
         ),
       ),
       yesButton: CustomDialogButton(
-        onTap: () async {
+        onTap: ()  {
           Navigator.pop(context);
+          onDone?.call();
         },
         text: "Dismiss",
         color: color,
